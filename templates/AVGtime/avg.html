@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+
+
+{% block stylecontent %}
+
+{% endblock %}
+
+
+
+
+{% block jumbotran %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+
+     <div class="col-md-12">
+        <h2 class="text-center">میانگین زمانی ارسال مرسولات بر اساس : </h2>
+    </div>
+    <br><br>
+     <div class="col-md-4 col-md-offset-5">
+     <br>
+        <a href="/avg-time/type-ferestande/"><li>بر اساس نوع و استان فرستنده</li></a>
+        <a href="/avg-time/type/"><li>بر اساس نوع</li></a>
+        <a href="/avg-time/ferestande/"><li>بر اساس آدرس فرستنده</li></a>
+        <a href="/avg-time/girande/"><li>بر اساس آدرس گیرنده</li></a>
+    </div>
+
+{% endblock %}
+
+{% block content-no-container %}
+
+
+
+
+{% endblock %}

@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+
+
+{% block stylecontent %}
+
+{% endblock %}
+
+
+
+
+{% block jumbotran %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+
+     <div class="col-md-12">
+        <h4 class="text-center" >ثبت مرسوله</h4>
+
+
+    </div>
+
+    <div class="col-md-4 col-md-offset-4" style="margin-top: 40px">
+
+        <form method='POST' >{% csrf_token %}
+            <p>مشخصات فرستنده :</p>
+            <input  class="form-control" placeholder="نام کاربری"  name="username1"><br>
+            <input type="password" class="form-control"  placeholder=" رمز عبور" id="password" name="password1"><br>
+            <input  class="form-control" placeholder="نام و نام خانوادگی"  name="name1"><br>
+            <input  class="form-control" placeholder="شماره ملی"  name="ssn1"><br>
+            <input  class="form-control" placeholder="جنسیت"  name="sex1"><br>
+            <input  class="form-control" placeholder="موبایل"  name="mobile1"><br>
+            <input  class="form-control" placeholder="تلفن ثابت"  name="phone1"><br>
+            <input  class="form-control" placeholder="ایمیل"  name="email1"><br>
+            <input  class="form-control" placeholder="آخرین مدرک تحصیلی"  name="last1"><br>
+            <!--adress-->
+            <input  class="form-control" placeholder="مرکز استان"  name="center1"><br>
+            <input  class="form-control" placeholder="شهر"  name="city1"><br>
+            <input  class="form-control" placeholder="خیابان"  name="street1"><br>
+            <input  class="form-control" placeholder="کد پستی"  name="postiCode1"><br>
+            <input  class="form-control" placeholder="پلاک"  name="pelak1"><br>
+            <input  class="form-control" placeholder="طبقه"  name="floor1"><br>
+
+            <p>مشخصات گیرنده :</p>
+            <input  class="form-control" placeholder="نام کاربری"  name="username2"><br>
+            <input type="password" class="form-control"  placeholder=" رمز عبور" id="password" name="password2"><br>
+            <input  class="form-control" placeholder="نام و نام خانوادگی"  name="name2"><br>
+            <input  class="form-control" placeholder="شماره ملی"  name="ssn2"><br>
+            <input  class="form-control" placeholder="جنسیت"  name="sex2"><br>
+            <input  class="form-control" placeholder="موبایل"  name="mobile2"><br>
+            <input  class="form-control" placeholder="تلفن ثابت"  name="phone2"><br>
+            <input  class="form-control" placeholder="ایمیل"  name="email2"><br>
+            <input  class="form-control" placeholder="آخرین مدرک تحصیلی"  name="last2"><br>
+            <!--adress-->
+            <input  class="form-control" placeholder="مرکز استان"  name="center2"><br>
+            <input  class="form-control" placeholder="شهر"  name="city2"><br>
+            <input  class="form-control" placeholder="خیابان"  name="street2"><br>
+            <input  class="form-control" placeholder="کد پستی"  name="postiCode2"><br>
+            <input  class="form-control" placeholder="پلاک"  name="pelak2"><br>
+            <input  class="form-control" placeholder="طبقه"  name="floor2"><br>
+
+            <p>اطلاعات مرسوله</p>
+            <input  class="form-control" placeholder="عنوان"  name="title"><br>
+            <input  class="form-control" placeholder="کد رهگیری"  name="rahgiri"><br>
+            <input  class="form-control" placeholder="توضیحات"  name="d"><br>
+            <input  class="form-control" placeholder="وزن"  name="w"><br>
+            <input  class="form-control" placeholder="کد پستچی"  name="postmancode"><br>
+            <input  class="form-control" placeholder="نوع"  name="type"><br>
+
+
+            <p>رسید</p>
+            <input  class="form-control" placeholder="شماره مرسوله"  name="type"><br>
+            <input  class="form-control" placeholder="نام ثبت کننده"  name="type"><br>
+            <input  class="form-control" placeholder="زمان"  name="type"><br>
+            <input  class="form-control" placeholder="نوع دفتر"  name="type"><br>
+
+            <input type='submit' class='btn btn-info btn-block' value='ثبت' />
+
+        </form>
+
+    </div>
+
+{% endblock %}
+
+{% block content-no-container %}
+
+
+
+
+{% endblock %}

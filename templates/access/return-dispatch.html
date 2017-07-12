@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+
+
+{% block stylecontent %}
+
+{% endblock %}
+
+
+
+
+{% block jumbotran %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+
+     <div class="col-md-12">
+        <h2 class="text-center">لیست مرسولات برگشت داده شده</h2>
+    </div>
+
+    <div class="col-md-6 col-md-offset-3" style="margin-top: 40px">
+        {% if err %}
+            <h3 class="text-center" style="color: red">کاربر وجود ندارد</h3>
+        {% else %}
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>عنوان مرسوله</th>
+                <th>کد رهگیری</th>
+                <th>مشاهده</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for p in list %}
+              <tr>
+                <td>{{ p.title }}</td>
+                <td>{{ p.tracknumber }}</td>
+                <td><a href="/state/{{ p.tracking_number }}"><button type="button" class="btn  btn-info">مشاهده</button></a></td>
+              </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+        {% endif %}
+    </div>
+
+{% endblock %}
+
+{% block content-no-container %}
+
+
+
+
+{% endblock %}

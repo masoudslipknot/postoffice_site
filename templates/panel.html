@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+
+
+{% block stylecontent %}
+
+{% endblock %}
+
+
+
+
+{% block jumbotran %}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-12" style="padding-top: 16px ; padding-bottom: 15px">
+        {% if request.COOKIES.type == "CEO" %}
+            <h2 class="text-center">پنل مدیر شرکت</h2>
+        {% endif %}
+
+
+{% if request.COOKIES.type == "manager" %}
+    <h2 class="text-center">پنل مدیر دفتر</h2>
+{% endif %}
+
+
+{% if request.COOKIES.type == "employee" %}
+    <h2 class="text-center">پنل کارمند</h2>
+{% endif %}
+
+
+{% if request.COOKIES.type == "organization_customer" %}
+    <h2 class="text-center">پنل کاربر حقوقی</h2>
+{% endif %}
+
+{% if request.COOKIES.type == "indivisoial_customer" %}
+        <h2 class="text-center">پنل کاربر حقیقی</h2>
+{% endif %}
+    </div>
+    </div>
+
+<div class="row" style="padding-top: 50px">
+{% if request.COOKIES.type == "CEO" %}
+<div class="col-md-4">
+<a href="rahgiri"><li>مشاهده اطلاعات مرسولات</li></a>
+<a href="/make-dispatch/"><li>ثبت مرسوله</li></a>
+    <a href="/avg-time/"><li>میانگین زمان ارسال مرسولات</li></a>
+    <a href="/set-manager/"><li>تعیین مدیر دفتر</li></a>
+    <a href="/set-manager/"><li>تعیین مدیر دفتر</li></a>
+     <a href="/set-employee/"><li>تعیین کارمند برای یک دفتر</li></a>
+     <a href="/fired/"><li>اخراج کارمند</li></a>
+     <a href="/employee-history/"><li>تاریخچه یک کارمند</li></a>
+</div>
+{% endif %}
+{% if request.COOKIES.type == "manager" %}
+<div class="col-md-4 ">
+    <a href="/avg-time/"><li>میانگین زمان ارسال مرسولات</li></a>
+<a href="rahgiri"><li>مشاهده اطلاعات مرسولات</li></a>
+<a href="/make-dispatch/"><li>ثبت مرسوله</li></a>
+     <a href="/set-employee/"><li>تعیین کارمند برای یک دفتر</li></a>
+     <a href="/fired/"><li>اخراج کارمند</li></a>
+     <a href="/employee-history/"><li>تاریخچه یک کارمند</li></a>
+    <a href="/return-dispatch/"><li>تاریخچه محصولات بازگشت داده شده</li></a>
+</div>
+
+
+{% endif %}
+{% if request.COOKIES.type == "employee" %}
+    <div class="col-md-4 ">
+
+        <a href="/make-dispatch/"><li>ثبت مرسوله</li></a>
+        <a href="rahgiri"><li>مشاهده اطلاعات مرسولات</li></a>
+        <a href="/changeState/"><li>تغییر وضعیت یک مرسوله</li></a>
+
+
+
+
+        <a href="/employee-history/"><li>تاریخچه یک کارمند</li></a>
+        <a href="/return-dispatch/"><li>تاریخچه محصولات بازگشت داده شده</li></a>
+
+    </div>
+{% endif %}
+
+
+{% if request.COOKIES.type == "organization_customer" %}{% endif %}
+
+{% if request.COOKIES.type == "indivisoial_customer" %}
+
+    <div class="col-md-2 col-md-offset-3">
+        <a href="dispatchs">
+
+            <h5 class="text-center">مرسولات پستی</h5>
+        </a>
+    </div>
+    <div class="col-md-2 ">
+        <a href="post-info">
+
+            <h5 class="text-center">سوابق فعالیت ها</h5>
+        </a>
+    </div>
+    <div class="col-md-2">
+        <a href="rahgiri">
+
+            <h5 class="text-center">ردیابی محصولات</h5>
+        </a>
+    </div>
+
+{% endif %}
+</div>
+
+{% endblock %}
+
+{% block content-no-container %}
+
+
+
+
+{% endblock %}

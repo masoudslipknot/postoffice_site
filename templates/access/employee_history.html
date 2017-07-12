@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+
+
+{% block stylecontent %}
+
+{% endblock %}
+
+
+
+
+{% block jumbotran %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+
+     <div class="col-md-12">
+        <h2 class="text-center">تاریخچه کارمند</h2>
+    </div>
+
+    <div class="col-md-4 col-md-offset-4" style="margin-top: 15px">
+    {% if set %}
+        <h3 class="text-center" style="color: green" >با موفقیت اعمال شد</h3>
+    {% endif %}
+    {% if notSet %}
+        <h3 class="text-center" style="color: red" >مشکلی در اعمال پیش آمده</h3>
+    {% endif %}
+    <br>
+    <p class="text-center">نام کاربری کارمند :</p>
+        <form  style="margin-top: 10px;" method="POST" action="/employee-history/show/">{% csrf_token %}
+            <input type="text" class="form-control" id="usr" name="usr"><br>
+
+            <input type='submit' class='btn btn-info btn-block' value='مشاهده' />
+        </form>
+    </div>
+
+{% endblock %}
+
+{% block content-no-container %}
+
+
+
+
+{% endblock %}

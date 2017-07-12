@@ -1,0 +1,46 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>{% block title %}{% endblock %} post</title>
+
+    {% include 'head.html' %}
+  <style>
+      {% block stylecontent %}
+      {% endblock %}
+  </style>
+  </head>
+
+  <body style="background-color:#c00;">
+
+    {% include 'navbar.html' %}
+
+
+    {% block jumbotran %}
+    {% endblock %}
+    <div class="container">
+
+
+        {% block content %}
+        {% endblock %}
+
+    </div> <!-- /container -->
+    {% block content-no-container %}
+    {% endblock %}
+
+
+    <div class="content" style="padding: 0px">
+
+    </div>
+
+  {% include 'JavaScript.html' %}
+
+  </body>
+</html>

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+
+
+{% block stylecontent %}
+
+{% endblock %}
+
+
+
+
+{% block jumbotran %}
+
+
+{% endblock %}ريال
+
+{% block content %}
+
+    {{ request.COOKIES.loggedIn }}
+
+     <div class="col-md-4 col-md-offset-4">
+         <h3 class="text-center">ورود به سیستم :</h3>
+    </div>
+
+    <div class="col-md-4 col-md-offset-4" style="margin-top: 40px">
+        {% if err %}
+            <p class="text-center">نام کاربری و یا کلمه عبور اشتباه می باشد</p>
+        {% endif %}
+        <form method='POST' >{% csrf_token %}
+        <input  class="form-control" placeholder="نام کاربری" id="username" name="username"><br>
+        <input type="password" class="form-control"  placeholder=" رمز عبور" id="password" name="password">
+    <br>
+            <input type='submit' class='btn btn-info btn-block ' value='ورود'  />
+
+        </form>
+
+    </div>
+
+
+{% endblock %}
+
+{% block content-no-container %}
+
+
+
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+
+
+{% block stylecontent %}
+
+{% endblock %}
+
+
+
+
+{% block jumbotran %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+
+     <div class="col-md-12">
+        <h2 class="text-center">رهگیری محصولات</h2>
+    </div>
+
+    <div class="col-md-6 col-md-offset-3" style="margin-top: 40px">
+    <p class="text-center">برای اطلاع از وضعیت مرسوله خود ، کد رهگیری را وارد کنید:</p>
+        <form class="input-group" style="margin-top: 10px;"  method="post">{% csrf_token %}
+            <input style="direction: rtl;" class="form-control" placeholder="کد رهگیری" type="text" name="rahgiri">
+            <span class="input-group-btn">
+                <input class="btn btn-warning" type="submit" value="بررسی">
+            </span>
+
+        </form>
+
+    </div>
+
+{% endblock %}
+
+{% block content-no-container %}
+
+
+
+
+{% endblock %}

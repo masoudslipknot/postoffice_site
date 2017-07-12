@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+
+
+{% block stylecontent %}
+
+{% endblock %}
+
+
+
+
+{% block jumbotran %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+
+     <div class="col-md-12">
+        <h2 class="text-center" >تغییر وضعیت محصول</h2>
+        {% if changed %}
+            <h4 class="text-center" style="color: green">وضعیت به خوبی تغییر کرد</h4>
+        {% endif %}
+
+    </div>
+
+    <div class="col-md-4 col-md-offset-4" style="margin-top: 40px">
+        <form method="post" class="input-group" style="margin-top: 10px;"> {% csrf_token %}
+            <p>شماره محصول</p>
+            <input  class="form-control" id="id" name="idDispatch"><br>
+            <p>وضعیت جدید :<p>
+            <select multiple class="form-control" id="sel2" name="sel">
+
+                <option value=3 >دفتر پستی فرستنده</option>
+                <option value= 4 >مرکز بخش فرستنده</option>
+                <option value=5>مرکز شهر فرستنده</option>
+                <option value=6>مرکز استان فرستنده</option>
+                <option value=7>مرکز استان گیرنده</option>
+                <option value=8>مرکز شهر گیرنده</option>
+                <option value= 9 >مرکز بخش گیرنده</option>
+                <option value=10>دفتر پستی گرینده</option>
+                <option value= 2>رسیده شده</option>
+                <option value= -1 >برگشت داده شده</option>
+            </select>
+            <input type='submit' class='btn btn-info btn-block' value='تغییر وضعیت' />
+        </form>
+    </div>
+
+{% endblock %}
+
+{% block content-no-container %}
+
+
+
+
+{% endblock %}

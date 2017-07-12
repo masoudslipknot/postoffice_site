@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+
+
+{% block stylecontent %}
+
+{% endblock %}
+
+
+
+
+{% block jumbotran %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+
+{% if err %}
+    <div class="row">
+    <div class="col-md-12" style="padding-top: 16px ; padding-bottom: 15px">
+        <h2 class="text-center">مرسوله یافت نشد
+        </h2>
+    </div>
+    </div>
+{% else %}
+    <div class="row">
+    <div class="col-md-12" style="padding-top: 16px ; padding-bottom: 15px">
+        <h2 class="text-center">وضعیت مرسوله
+        </h2>
+    </div>
+    </div>
+    <div class="row" style="padding-top: 45px">
+    <div class="col-md-2 ">
+        <img src="/static/img/template/state/box.png" class="img-responsive" alt="Cinque Terre">
+    </div>
+        <div class="col-md-4" style="padding-top: 10px">
+          <div class="panel panel-info" >
+            <div class="panel-heading">
+              <h3 class="panel-title">اطلاعات مرسوله</h3>
+            </div>
+            <div class="panel-body">عنوان : {{ title }} <br> نوع : {{ type }} <br> شرح : {{ description }} <br> وزن : {{ weight }} گرم
+            </div>
+          </div>
+
+        </div>
+    <div class="col-md-4">
+          <br>
+        <h4>مرسوله شما در {{ state }} می باشد</h4>
+    </div>
+    </div>
+{% endif %}
+
+
+{% endblock %}
+
+{% block content-no-container %}
+
+
+
+
+{% endblock %}
